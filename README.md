@@ -118,6 +118,8 @@ Desarrolladora Fullstack en formación
 
 Proyecto desarrollado como proyecto personal para aplicar conocimientos de desarrollo Front-End con **React, TypeScript, Vite y Tailwind CSS**, explorando además la integración de inteligencia artificial aplicada a la nutrición, gestión de alimentos y planificación de comidas.
 
+---
+
 ## Licencia
 
 Copyright (c) 2026 Gabriela Alvarado Rosales.
@@ -127,3 +129,9 @@ Todos los derechos están reservados.
 
 No se permite copiar, modificar, distribuir, sublicenciar ni utilizar este código
 con fines comerciales sin autorización previa de la autora.
+
+---
+
+## Enlace GitHub Pages
+
+https://marmopache.github.io/ProteInApp/
