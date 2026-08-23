@@ -12,7 +12,7 @@ import { Home } from './pages/Home/Home';
  */
 export const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ProteInApp">
       {/* In a larger app you could place layout wrappers (e.g. ThemeProvider) here */}
       <Routes>
         {/* Index route – renders the landing page */}
