@@ -1,0 +1,84 @@
+/* ============================== */
+/*    Tailwind v4 entry point */
+/*    ============================== */
+@import "tailwindcss";
+
+.test {
+  --color-primary: #25b158;
+  --color-accent: #5654c9;
+
+  --color-neutral-light: #fafaf9;
+  --color-neutral-gray: #71717a;
+  --color-neutral-dark: #18181b;
+
+/* Typography */
+
+
+  --font-headings: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+/* Border radius */
+
+
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+/* ==============================
+/*    Design System variables */
+/*    ============================== */
+/* ============================== */
+
+@theme {
+/*   /* Colors */
+  /* Colors */
+
+  --color-primary: #25b158;
+  --color-accent: #5654c9;
+
+  --color-neutral-light: #fafaf9;
+  --color-neutral-gray: #71717a;
+  --color-neutral-dark: #18181b;
+
+/*   /* Typography */
+  /* Typography */
+
+  --font-headings: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Border radius */
+
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+/* ==============================
+/*    Global styles */
+/*    ============================== */ 
+
+:root {
+  font-family: var(--font-body);
+
+  color: var(--color-neutral-dark);
+
+  background-color: var(--color-neutral-light);
+
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
