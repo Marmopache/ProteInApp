@@ -1,13 +1,15 @@
-// src/components/ui/Badge.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type HTMLMotionProps } from "framer-motion";
 
-export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface BadgeProps extends HTMLMotionProps<"span"> {
   children: React.ReactNode;
   className?: string;
 }
 
-export const Badge: React.FC<BadgeProps> = ({ children, className = '', ...rest }) => {
+export const Badge = ({
+  children,
+  className = "",
+  ...rest
+}: BadgeProps) => {
   return (
     <motion.span
       whileHover={{ scale: 1.05 }}

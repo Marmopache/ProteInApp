@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { SectionHeading } from '../../../components/ui/SectionHeading';
 import { Card } from '../../../components/ui/Card';
 import { type Testimonial, TESTIMONIALS } from '../../../data/homeContent';
-import { User } from 'lucide-react';
 
 export const Testimonials: React.FC = () => {
   return (
