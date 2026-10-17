@@ -1,129 +1,96 @@
-# ProteInMyFridge – Gestión Inteligente de Alimentos y Nutrición
+[Read in English](README.md)
 
-[![React](https://img.shields.io/badge/React-18-61DAFB)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-latest-646CFF)](https://vitejs.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-06B6D4)](https://tailwindcss.com/)
+# ProteInMyFridge (ProteInApp)
 
-## Descripción del Proyecto
+Landing page responsiva y prototipo de interfaz de una aplicación web planificada para organizar los alimentos del refrigerador y la despensa y alcanzar una meta diaria de proteína.
 
-**ProteInMyFridge** es una aplicación web desarrollada con **React, Vite y TypeScript**, diseñada para ayudar a los usuarios a gestionar de forma inteligente los alimentos disponibles en su hogar y alcanzar sus objetivos diarios de consumo de proteína.
+> **Estado del proyecto:** prototipo de interfaz. Solo la landing page está implementada. Las funciones de la aplicación que se describen en la página están planificadas y aún no funcionan.
 
-La aplicación combina gestión de inventario, seguimiento nutricional, recomendaciones personalizadas y herramientas de inteligencia artificial para facilitar la planificación de comidas, aprovechar los alimentos disponibles y reducir el desperdicio.
+**Demo en vivo:** https://marmopache.github.io/ProteInApp/
 
-El sistema permite organizar los alimentos disponibles en el refrigerador y la despensa, registrar productos manualmente o mediante escaneo, recibir recomendaciones basadas en los alimentos disponibles y realizar un seguimiento del progreso nutricional.
+## Captura de pantalla
 
-## Objetivos
+![Landing page](docs/landing.png)
 
-- Facilitar la gestión y organización de los alimentos disponibles en el hogar.
-- Ayudar a los usuarios a establecer y alcanzar una meta diaria de proteína.
-- Generar recomendaciones de comidas y recetas según los alimentos disponibles.
-- Utilizar inteligencia artificial para automatizar el reconocimiento de productos y generar recomendaciones personalizadas.
-- Reducir el desperdicio de alimentos mediante alertas de vencimiento y sugerencias de preparación.
-- Desarrollar una experiencia de usuario moderna, responsiva y adaptable a dispositivos móviles y de escritorio.
+## Qué está implementado
 
-## Tecnologías Utilizadas
+| Funcionalidad                                                                                          | Estado          |
+| ------------------------------------------------------------------------------------------------------ | --------------- |
+| Landing page responsiva (Hero, Cómo funciona, Características, FAQ, Footer)                            | ✅ Implementado |
+| Arquitectura de componentes reutilizables con contenido separado de la UI (`src/data/homeContent.tsx`) | ✅ Implementado |
+| Despliegue automático en GitHub Pages (GitHub Actions)                                                 | ✅ Implementado |
+| Inventario de alimentos (refrigerador y despensa)                                                      | 🗓 Planificado  |
+| Meta diaria de proteína y seguimiento del progreso                                                     | 🗓 Planificado  |
+| Alertas de fechas de vencimiento                                                                       | 🗓 Planificado  |
+| Escaneo de códigos de barras y reconocimiento de productos con IA                                      | 🗓 Planificado  |
+| Recomendaciones de recetas y comidas con IA                                                            | 🗓 Planificado  |
+| Cuentas de usuario e inicio de sesión                                                                  | 🗓 Planificado  |
 
-- **Front-End:** React 18, TypeScript, JSX/TSX
-- **Build Tool:** Vite
-- **Estilos:** Tailwind CSS
-- **Iconos:** Lucide React
-- **Gestión de Estado:** React Hooks
-- **Arquitectura:** Componentes reutilizables
-- **Control de Versiones:** Git y GitHub
-- **Editor de Código:** Visual Studio Code
+## Tecnologías
 
-## Funcionalidades
+| Capa       | Tecnología                    |
+| ---------- | ----------------------------- |
+| Framework  | React 18                      |
+| Lenguaje   | TypeScript                    |
+| Build tool | Vite                          |
+| Estilos    | Tailwind CSS                  |
+| Iconos     | Lucide React                  |
+| Estado     | React Hooks                   |
+| Despliegue | GitHub Pages + GitHub Actions |
 
-### Gestión de Alimentos
+## Estructura del proyecto
 
-- Registro manual de alimentos disponibles en el hogar.
-- Organización de productos según su ubicación, como refrigerador y despensa.
-- Registro de información relevante de los productos.
-- Escaneo de códigos de barras para facilitar el ingreso de alimentos.
-- Reconocimiento de productos mediante fotografías utilizando inteligencia artificial.
+```
+ProteInApp/
+├── .github/workflows/   # Despliegue en GitHub Pages
+├── public/
+├── src/
+│   ├── components/      # Componentes de UI reutilizables
+│   └── data/
+│       └── homeContent.tsx   # Contenido de la landing page
+├── index.html
+├── package.json
+├── tailwind.config.cjs
+├── vite.config.ts
+└── tsconfig.json
+```
 
-### Objetivo de Proteína
+## Instalación
 
-- Configuración de una meta diaria de consumo de proteína.
-- Cálculo de requerimientos nutricionales según el perfil del usuario.
-- Seguimiento del consumo diario de proteína.
-- Visualización del progreso hacia la meta establecida.
-- Recomendaciones para ayudar al usuario a alcanzar su objetivo.
+Requisitos: Node.js (LTS) y npm.
 
-### Recomendaciones Inteligentes
+```bash
+git clone https://github.com/Marmopache/ProteInApp.git
+cd ProteInApp
+npm install
+npm run dev
+```
 
-- Generación de recetas utilizando los alimentos disponibles.
-- Sugerencias de comidas personalizadas según gustos y objetivos.
-- Recomendaciones basadas en los productos existentes en el refrigerador y la despensa.
-- Planificación de comidas orientada al cumplimiento de objetivos nutricionales.
+Luego abrir la dirección local que aparece en la terminal (normalmente http://localhost:5173/).
 
-### Control de Vencimientos
+Para generar la versión de producción:
 
-- Registro de fechas de vencimiento de los alimentos.
-- Alertas sobre productos próximos a vencer.
-- Sugerencias de recetas para aprovechar alimentos antes de su vencimiento.
-- Apoyo en la reducción del desperdicio de alimentos.
+```bash
+npm run build
+```
 
----
+## Qué practiqué
 
-## Arquitectura de la Interfaz
+- Construcción de una interfaz responsiva con React, TypeScript y Tailwind CSS
+- Estructura de proyecto con componentes reutilizables y contenido centralizado
+- Uso de Vite como herramienta de build
+- Despliegue de un sitio estático con GitHub Pages y GitHub Actions
 
-La página principal está construida mediante componentes reutilizables que permiten mantener una estructura organizada y escalable.
+## Notas
 
-### Home
-
-- **Navbar:** barra de navegación principal.
-- **Hero:** presentación de la aplicación, propuesta de valor y llamados a la acción.
-- **HowItWorks:** explicación de los pasos principales para utilizar la aplicación.
-- **Features:** presentación de las principales funcionalidades.
-- **Testimonials:** testimonios y experiencias de usuarios.
-- **FAQ:** preguntas frecuentes sobre la aplicación.
-- **Footer:** información complementaria, enlaces y contacto.
-
-Los contenidos utilizados en estas secciones se centralizan en:
-
-`src/data/homeContent.tsx`
-
-En este archivo se encuentran definidos los objetos principales:
-
-- `HERO`
-- `HOW_IT_WORKS`
-- `FEATURES`
-- `TESTIMONIALS`
-- `FAQ_ITEMS`
-
-Esta estructura permite separar los datos del contenido de los componentes visuales, facilitando su mantenimiento y modificación.
-
-## Valor Añadido
-
-- **Enfoque nutricional:** la aplicación prioriza el cumplimiento de objetivos diarios de proteína, integrando nutrición con la gestión de alimentos del hogar.
-- **Inventario inteligente:** permite conocer qué alimentos tiene el usuario disponibles y utilizarlos como base para futuras recomendaciones.
-- **Inteligencia artificial:** permite automatizar tareas como el reconocimiento de productos y la generación de recetas personalizadas.
-- **Reducción del desperdicio:** considera las fechas de vencimiento para recomendar cómo aprovechar los alimentos disponibles.
-- **Experiencia personalizada:** las recomendaciones pueden adaptarse a los alimentos disponibles, preferencias y objetivos del usuario.
-- **Diseño responsivo:** la interfaz está desarrollada con Tailwind CSS y componentes flexibles para ofrecer una experiencia adecuada en dispositivos móviles y de escritorio.
-
----
-
-## Autora
-
-- **Gabriela Alvarado Rosales**
-
-Desarrolladora Fullstack en formación
-
----
-
-## Nota
-
-Proyecto desarrollado como proyecto personal para aplicar conocimientos de desarrollo Front-End con **React, TypeScript, Vite y Tailwind CSS**, explorando además la integración de inteligencia artificial aplicada a la nutrición, gestión de alimentos y planificación de comidas.
+Los testimonios de la landing page son ejemplos ilustrativos y no corresponden a usuarios reales.
 
 ## Licencia
 
-Copyright (c) 2026 Gabriela Alvarado Rosales.
+Copyright (c) 2026 Gabriela Alvarado Rosales. Todos los derechos reservados.
+Este código fuente es visible con fines demostrativos y de portafolio. No se permite copiar, modificar, distribuir, sublicenciar ni utilizar este código con fines comerciales sin autorización previa de la autora.
 
-Este proyecto es de código fuente visible con fines demostrativos y de portafolio.
-Todos los derechos están reservados.
+## Autora
 
-No se permite copiar, modificar, distribuir, sublicenciar ni utilizar este código
-con fines comerciales sin autorización previa de la autora.
+**Gabriela Alvarado Rosales**, Desarrolladora Full-Stack Junior (Python, Django, React)
+GitHub: [@Marmopache](https://github.com/Marmopache)

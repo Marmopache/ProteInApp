@@ -1,5 +1,6 @@
 // src/data/homeContent.tsx
 // Centralized content for the ProteInMyFridge landing page
+// NOTE: this is a UI prototype. Features described here are planned, not yet implemented.
 
 import {
   Refrigerator,
@@ -41,39 +42,43 @@ export const HERO = {
   title: "Tu proteína diaria, sin complicarte.",
   subtitle:
     "Organiza lo que tienes en casa y descubre qué comer para alcanzar tus objetivos cada día.",
-  ctaPrimary: "Probar versión beta",
+  ctaPrimary: "Conocer el proyecto",
   ctaSecondary: "Ver cómo funciona",
-  badges: ["🧪 Versión beta", "🤖 Potenciado por IA", "💚 Acceso gratuito"],
+  badges: [
+    "🚧 Prototipo en desarrollo",
+    "🤖 IA planificada",
+    "💚 Proyecto de portafolio",
+  ],
 };
 
 export const HOW_IT_WORKS: Step[] = [
   {
     number: 1,
     title: "Configura tu perfil",
-    description: 
+    description:
       "Completa tu perfil y define tu objetivo. ProteIn calculará una meta diaria de proteína adaptada a ti.",
-    icon: <Target className="w-6 h-6 text-primary" />,
+    icon: <Target className="w-6 h-6 text-white" />,
   },
   {
     number: 2,
     title: "Organiza tus alimentos",
     description:
       "Añade productos manualmente o escanea sus etiquetas con IA para mantener tu refrigerador y despensa actualizados.",
-    icon: <Refrigerator className="w-6 h-6 text-primary" />,
+    icon: <Refrigerator className="w-6 h-6 text-white" />,
   },
   {
     number: 3,
     title: "Recibe recomendaciones",
     description:
-      "La IA genera recetas, menús y planes alimenticios según tus objetivos, gustos y los alimentos disponibles.",
-    icon: <Sparkles className="w-6 h-6 text-primary" />,
+      "La IA generará recetas, menús y planes alimenticios según tus objetivos, gustos y los alimentos disponibles.",
+    icon: <Sparkles className="w-6 h-6 text-white" />,
   },
   {
     number: 4,
     title: "Aprovecha lo que tienes",
     description:
-      "Recibe avisos cuando tus alimentos estén próximos a vencer y descubre recetas basadas en tus gustos y en lo que tienes disponible.",
-    icon: <ChefHat className="w-6 h-6 text-primary" />,
+      "Recibirás avisos cuando tus alimentos estén próximos a vencer y descubrirás recetas basadas en tus gustos y en lo que tienes disponible.",
+    icon: <ChefHat className="w-6 h-6 text-white" />,
   },
 ];
 
@@ -94,7 +99,7 @@ export const FEATURES: Feature[] = [
     icon: <Sparkles className="w-8 h-8 text-primary" />,
     title: "¿Qué puedo cocinar?",
     description:
-      "La IA analiza los alimentos que tienes disponibles y te propone comidas que puedes preparar ahora.",
+      "La IA analizará los alimentos que tienes disponibles y te propondrá comidas que puedes preparar ahora.",
   },
   {
     icon: <Utensils className="w-8 h-8 text-primary" />,
@@ -106,35 +111,39 @@ export const FEATURES: Feature[] = [
     icon: <CalendarClock className="w-8 h-8 text-primary" />,
     title: "Evita que tus alimentos venzan",
     description:
-      "Recibe alertas sobre los productos que están próximos a vencer y obtén ideas para aprovecharlos a tiempo.",
+      "Recibirás alertas sobre los productos que están próximos a vencer y obtendrás ideas para aprovecharlos a tiempo.",
   },
   {
     icon: <Target className="w-8 h-8 text-primary" />,
     title: "Nutrición que se adapta a ti",
     description:
-      "ProteIn tiene en cuenta tus objetivos de proteína, calorías y alimentación para recomendar comidas que realmente te sirvan.",
+      "ProteIn tendrá en cuenta tus objetivos de proteína, calorías y alimentación para recomendar comidas que realmente te sirvan.",
   },
 ];
 
+// Illustrative examples only: they are NOT real users.
+const PLACEHOLDER_AVATAR =
+  "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><rect width='80' height='80' fill='%23374151'/></svg>";
+
 export const TESTIMONIALS: Testimonial[] = [
   {
-    avatar: "https://via.placeholder.com/80",
+    avatar: PLACEHOLDER_AVATAR,
     name: "María Gómez",
-    role: "Organiza mejor sus comidas",
+    role: "Ejemplo ilustrativo (no es un usuario real)",
     quote:
       "Antes abría el refrigerador y no sabía qué cocinar. Ahora la app me muestra opciones usando lo que ya tengo.",
   },
   {
-    avatar: "https://via.placeholder.com/80",
+    avatar: PLACEHOLDER_AVATAR,
     name: "Luis Pérez",
-    role: "Cuida su alimentación",
+    role: "Ejemplo ilustrativo (no es un usuario real)",
     quote:
       "Me gusta que las recomendaciones consideran mis objetivos nutricionales sin obligarme a seguir un menú rígido.",
   },
   {
-    avatar: "https://via.placeholder.com/80",
+    avatar: PLACEHOLDER_AVATAR,
     name: "Familia Rodríguez",
-    role: "Reduce el desperdicio",
+    role: "Ejemplo ilustrativo (no es un usuario real)",
     quote:
       "Ahora sabemos qué alimentos tenemos, cuáles están por vencer y qué podemos preparar con ellos.",
   },
@@ -142,34 +151,34 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    question: "¿Cómo agrego los alimentos que tengo en casa?",
+    question: "¿Cómo agregaré los alimentos que tengo en casa?",
     answer:
-      "Puedes agregarlos manualmente, escanear su código de barras o tomar una foto para que la IA ayude a identificar el producto y sus datos.",
+      "Podrás agregarlos manualmente, escanear su código de barras o tomar una foto para que la IA ayude a identificar el producto y sus datos.",
   },
   {
-    question: "¿Puedo separar mi refrigerador y despensa?",
+    question: "¿Podré separar mi refrigerador y despensa?",
     answer:
-      "Sí. Puedes organizar tus alimentos según dónde los tengas para encontrar rápidamente lo que está disponible.",
+      "Sí. Podrás organizar tus alimentos según dónde los tengas para encontrar rápidamente lo que está disponible.",
   },
   {
-    question: "¿Cómo funcionan las recomendaciones?",
+    question: "¿Cómo funcionarán las recomendaciones?",
     answer:
-      "La IA considera los alimentos disponibles, tus preferencias, tus hábitos y tus objetivos nutricionales para sugerirte comidas que puedas preparar.",
+      "La IA considerará los alimentos disponibles, tus preferencias, tus hábitos y tus objetivos nutricionales para sugerirte comidas que puedas preparar.",
   },
   {
-    question: "¿La app me ayuda a evitar desperdiciar comida?",
+    question: "¿La app me ayudará a evitar desperdiciar comida?",
     answer:
-      "Sí. Puedes registrar fechas de vencimiento y recibir alertas junto con ideas de recetas para aprovechar primero los alimentos que están próximos a vencer.",
+      "Esa es la idea. Podrás registrar fechas de vencimiento y recibir alertas junto con ideas de recetas para aprovechar primero los alimentos que están próximos a vencer.",
   },
   {
-    question: "¿Puedo controlar mi consumo de proteína?",
+    question: "¿Podré controlar mi consumo de proteína?",
     answer:
-      "Sí. Puedes establecer un objetivo de proteína y la app puede considerarlo al recomendarte comidas durante el día.",
+      "Sí. Podrás establecer un objetivo de proteína y la app lo considerará al recomendarte comidas durante el día.",
   },
   {
-    question: "¿Necesito tener todos los ingredientes de una receta?",
+    question: "¿Necesitaré tener todos los ingredientes de una receta?",
     answer:
-      "No necesariamente. Las recomendaciones priorizan los ingredientes que ya tienes y pueden sugerirte alternativas o indicarte qué te falta.",
+      "No necesariamente. Las recomendaciones priorizarán los ingredientes que ya tienes y podrán sugerirte alternativas o indicarte qué te falta.",
   },
 ];
 
