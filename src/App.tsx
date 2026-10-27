@@ -1,25 +1,31 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home } from './pages/Home/Home';
+// src/App.tsx
+import React from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import { Home } from "./pages/Home/Home";
+import Inventory from "./pages/Inventory/Inventory";
+import Profile from "./pages/Profile/Profile";
+import Recipes from "./pages/Recipes/Recipes";
+import NotFound from "./pages/NotFound/NotFound";
+
 /**
- * App – the top‑level component rendered by `main.tsx`.
- *
- * It provides a <BrowserRouter> which watches the browser URL and
- * renders the matching <Route>.  For now we have a single route:
- *   path="/" → <Home />
- *
- * Future pages can be added as additional <Route> elements.
+ * HashRouter is used because GitHub Pages only serves static files:
+ * URLs like /#/inventario never hit the server, so reloading works.
  */
 export const App: React.FC = () => {
   return (
-    <BrowserRouter basename="/ProteInApp">
-      {/* In a larger app you could place layout wrappers (e.g. ThemeProvider) here */}
+    <HashRouter>
       <Routes>
-        {/* Index route – renders the landing page */}
-        <Route path="/" element={<Home />} />
-        {/* Add more routes later, e.g. <Route path="/about" element={<About />} /> */}
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="inventario" element={<Inventory />} />
+          <Route path="meta" element={<Profile />} />
+          <Route path="recetas" element={<Recipes />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
+
 export default App;
