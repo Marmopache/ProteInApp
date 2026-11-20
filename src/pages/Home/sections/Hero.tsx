@@ -7,7 +7,7 @@ import { Refrigerator } from "lucide-react";
 import { Button } from "../../../components/ui/Button";
 import { Badge } from "../../../components/ui/Badge";
 import { HERO } from "../../../data/homeContent";
-
+import { scrollToSection } from "../../../lib/scroll";
 
 export const Hero: React.FC = () => {
   return (
@@ -37,10 +37,8 @@ export const Hero: React.FC = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-
         {/* Contenido textual */}
         <div>
-
           <h1
             className="
               text-4xl
@@ -54,7 +52,6 @@ export const Hero: React.FC = () => {
             {HERO.title}
           </h1>
 
-
           <p
             className="
               text-lg
@@ -66,7 +63,6 @@ export const Hero: React.FC = () => {
           >
             {HERO.subtitle}
           </p>
-
 
           <div
             className="
@@ -80,20 +76,19 @@ export const Hero: React.FC = () => {
             <Button
               variant="primary"
               className="w-full sm:w-auto"
+              onClick={() => scrollToSection("caracteristicas")}
             >
               {HERO.ctaPrimary}
             </Button>
 
-
             <Button
               variant="secondary"
               className="w-full sm:w-auto"
+              onClick={() => scrollToSection("como-funciona")}
             >
               {HERO.ctaSecondary}
             </Button>
-
           </div>
-
 
           <div
             className="
@@ -103,16 +98,10 @@ export const Hero: React.FC = () => {
             "
           >
             {HERO.badges.map((badge) => (
-              <Badge key={badge}>
-                {badge}
-              </Badge>
+              <Badge key={badge}>{badge}</Badge>
             ))}
-
           </div>
-
         </div>
-
-
 
         {/* Mockup aplicación */}
         <motion.div
@@ -128,7 +117,6 @@ export const Hero: React.FC = () => {
           "
           whileHover={{ scale: 1.02 }}
         >
-
           <div
             className="
               w-64
@@ -143,7 +131,6 @@ export const Hero: React.FC = () => {
               space-y-2
             "
           >
-
             {/* Header del mockup */}
 
             <div
@@ -154,7 +141,6 @@ export const Hero: React.FC = () => {
                 mb-2
               "
             >
-
               <span
                 className="
                   font-headings
@@ -165,16 +151,12 @@ export const Hero: React.FC = () => {
                 Inventario
               </span>
 
-
               <Refrigerator
                 size={20}
                 className="text-primary"
                 aria-label="Inventario de refrigerador"
               />
-
             </div>
-
-
 
             {/* Filas simuladas */}
 
@@ -190,14 +172,8 @@ export const Hero: React.FC = () => {
                 "
               />
             ))}
-
-
           </div>
-
-
         </motion.div>
-
-
       </motion.div>
     </section>
   );

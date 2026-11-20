@@ -1,14 +1,17 @@
 // src/pages/Home/sections/Features.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SectionHeading } from '../../../components/ui/SectionHeading';
-import { Card } from '../../../components/ui/Card';
-import { type Feature, FEATURES } from '../../../data/homeContent';
-import { CheckCircle } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { SectionHeading } from "../../../components/ui/SectionHeading";
+import { Card } from "../../../components/ui/Card";
+import { type Feature, FEATURES } from "../../../data/homeContent";
+import { CheckCircle } from "lucide-react";
 
 export const Features: React.FC = () => {
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16 bg-white dark:bg-neutral-dark">
+    <section
+      id="caracteristicas"
+      className="scroll-mt-20 py-20 px-4 md:px-8 lg:px-16 bg-white dark:bg-neutral-dark"
+    >
       <SectionHeading
         title="Características destacadas"
         subtitle="Todo lo que ProteInMyFridge hace por ti, sin complicaciones."
@@ -21,7 +24,10 @@ export const Features: React.FC = () => {
         transition={{ duration: 0.6 }}
       >
         {FEATURES.map((feature: Feature, idx) => (
-          <Card key={idx} className="flex flex-col items-center text-center p-6">
+          <Card
+            key={idx}
+            className="flex flex-col items-center text-center p-6"
+          >
             <div className="mb-4 text-primary">
               {feature.icon ?? <CheckCircle size={32} />}
             </div>

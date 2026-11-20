@@ -1,13 +1,16 @@
 // src/pages/Home/sections/HowItWorks.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SectionHeading } from '../../../components/ui/SectionHeading';
-import { type Step, HOW_IT_WORKS } from '../../../data/homeContent';
-import { CheckCircle } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { SectionHeading } from "../../../components/ui/SectionHeading";
+import { type Step, HOW_IT_WORKS } from "../../../data/homeContent";
+import { CheckCircle } from "lucide-react";
 
 export const HowItWorks: React.FC = () => {
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16 bg-neutral-light dark:bg-neutral-dark">
+    <section
+      id="como-funciona"
+      className="scroll-mt-20 py-20 px-4 md:px-8 lg:px-16 bg-neutral-light dark:bg-neutral-dark"
+    >
       <SectionHeading
         title="¿Cómo funciona?"
         subtitle="Descubre el flujo sencillo que transforma tus alimentos en planes nutricionales."
@@ -20,7 +23,10 @@ export const HowItWorks: React.FC = () => {
         transition={{ duration: 0.6 }}
       >
         {HOW_IT_WORKS.map((step: Step) => (
-          <div key={step.number} className="flex flex-col items-center text-center p-4">
+          <div
+            key={step.number}
+            className="flex flex-col items-center text-center p-4"
+          >
             <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white mb-4">
               {step.icon ?? <CheckCircle size={24} />}
             </div>
